@@ -1,0 +1,26 @@
+$purple: #854dff;
+$red: #ff5757;
+$white: #ffffff;
+$off-white: #f0f0f0;
+$light-gray: #dbdbdb;
+$smokey-gray: #716f6f;
+$off-black: #141414;
+
+$poppins: 'Poppins', sans-serif;
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 16px;
+}
+body{
+    width: 100%;
+    height: 100vh;
+
+    display: grid;
+    place-items: center;
+}

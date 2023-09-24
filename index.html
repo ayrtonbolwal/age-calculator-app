@@ -20,31 +20,31 @@
   </head>
   <body>
     <main class="target">
-      <form action="">
+      <form>
         <div class="item">
-          <label for="dayField">Day</label>
+          <label for="dayField" id="labelDay">Day</label>
           <input type="text" id="dayField">
           <p id="errorMessageDay"></p>
         </div>
         <div class="item">
-          <label for="monthField">Month</label>
+          <label for="monthField" id="labelMonth">Month</label>
           <input type="text" id="monthField">
           <p id="errorMessageMonth"></p>
         </div>
         <div class="item">
-          <label for="yearField">Year</label>
+          <label for="yearField" id="labelYear">Year</label>
           <input type="text" id="yearField">
-          <p id="errorMessageMonth"></p>
+          <p id="errorMessageYear"></p>
         </div>
       </form>
       <div class="divider">
-        <h2></h2>
-        <button><img src="./assets/images/icon-arrow.svg" alt=""></button>
+        <hr>
+        <button id="btnSend"><img src="./assets/images/icon-arrow.svg" alt=""></button>
       </div>
       <div class="results">
-        <p><span id="yearsResult"></span>years</p>
-        <p><span id="monthsResult"></span>months</p>
-        <p><span id="daysResult"></span>days</p>
+        <p><span id="yearsResult">--</span> years</p>
+        <p><span id="monthsResult">--</span> months</p>
+        <p><span id="daysResult">--</span> days</p>
       </div>
     </main>
     <script src="js/script.js"></script>

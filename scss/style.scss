@@ -1,0 +1,192 @@
+$purple: #854dff;
+$red: #ff5757;
+$white: #ffffff;
+$off-white: #f0f0f0;
+$light-gray: #dbdbdb;
+$smokey-gray: #716f6f;
+$off-black: #141414;
+
+$poppins: 'Poppins', sans-serif;
+
+$big-size: 6rem;
+
+@mixin dflexcenter{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+@mixin dflexstart{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 16px;
+    font-family: $poppins;
+}
+body{
+    width: 100%;
+    height: 100vh;
+
+    display: grid;
+    place-items: center;
+    background-color: $light-gray;
+}
+
+.target{
+    width: 840px;
+    height: 650px;
+    border: none;
+    border-radius: 1rem 1rem 10rem 1rem;
+    background-color: $white;
+    padding: 3rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    form{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+        height: 100px;
+
+        gap: 2rem;
+    
+        .item{
+            @include dflexstart;
+
+            label{
+                text-transform: uppercase;
+                margin-bottom: .5rem;
+                color: $smokey-gray;
+                letter-spacing: 3px;
+            }
+
+            input{
+                width: 8rem;
+                font-size: 2rem;
+                font-weight: 700;
+                padding: .7rem;
+                border: solid 1px $light-gray;
+                border-radius: .5rem;
+
+                &:focus{
+                    outline: none;
+                    border-color: $purple;
+                }
+            }
+
+            p{
+                margin-top: 10px;
+                font-style: italic;
+                color: $red;
+                font-size: 12px;
+            }
+
+
+            
+        }
+    }
+
+    .divider{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+
+        hr{
+            width: 100%;
+        }
+        button{
+            border-radius: 100px;
+            padding: 1.5rem;
+            border: none;
+            background-color: $off-black;
+            cursor: pointer;
+
+            
+            &:hover{
+                background-color: $purple;
+            }
+        }
+    }
+
+    .results{
+        font-size: $big-size;
+        font-style: italic;
+        font-weight: 700;
+        @include dflexstart();
+
+        p{
+            line-height: $big-size + 1rem;
+        }
+
+        span{
+            color: $purple;
+        }
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    html{
+        font-size: 12px;
+    }
+
+    .target{
+        width: 90%;
+        height: fit-content;
+        padding: 3rem 1.5rem;
+    
+        form{
+            gap: 1rem;
+            width: 100%;
+
+            .item{
+                font-size: 1rem;
+                width: 100%;
+
+                input{
+                    width: 100%;
+                }
+
+                p{
+                    font-size: 8px;
+                }
+            }
+        }
+
+        .divider{
+            margin: 2rem 0;
+            height: 6rem;
+            position: relative;
+
+            button{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+
+        .results{
+            font-size: 3rem;
+            
+            p{
+                line-height: 4rem;
+            }
+        }
+    }
+
+}
